@@ -1,0 +1,14 @@
+{
+    "blogs": [
+      {
+        "TITLE": "JWT and Authentication",
+        "DESCRIPTION": "Some notes on the basic theory behind jwts and single factor authentication",
+        "IMAGE": "/blogs/kuma.JPG"
+      },
+      {
+        "TITLE": "Angular Testing blog cite",
+        "DESCRIPTION": "This is a test file used to load",
+        "IMAGE": "/blogs/kuma.JPG"
+      }
+    ]
+}
