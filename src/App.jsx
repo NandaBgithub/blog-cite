@@ -7,6 +7,7 @@ import './App.css'
 import Navigation from './components/navigation/Navigation.jsx'
 import Blog from './components/blog/Blog.jsx'
 import Article from './components/article/Article.jsx'
+import About from './components/about/About.jsx'
 
 export const SearchContext = createContext(null)
 
@@ -22,7 +23,8 @@ function App() {
       </SearchContext.Provider>
     )
   }
-  
+
+
   if (pattern.test(window.location.pathname)){
     let articleName = (window.location.pathname.replace("/blog", "").replace('/', ''));
 
@@ -34,8 +36,10 @@ function App() {
   }
 
   if(window.location.pathname == '/About'){
-    <div></div>
+
+    return (<About/>)
   }
+  
 
 }
 

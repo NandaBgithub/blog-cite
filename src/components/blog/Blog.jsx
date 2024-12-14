@@ -49,6 +49,15 @@ function Blog(){
                     return (
                         <BlogCard key={index} metadata={element}/>
                     )})):<></>}
+            <div className="github-perma-container">
+                <img className="github-icon" src="/blogs/github-mark-white.png">
+                
+                </img>
+
+                <a id="github-link" href="https://github.com/NandaBgithub">
+                    GitHub
+                </a>
+            </div>
         </div>
 
     )
