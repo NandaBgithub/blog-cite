@@ -1,5 +1,5 @@
 import './Blog.css'
-function BlogCard({metadata}) {
+function BlogCard({id, metadata}) {
     function handleArticleClick(title){
         let formattedTitle = title.replace(/%20/g, "-")
         let oldhref = window.location.href
@@ -7,10 +7,10 @@ function BlogCard({metadata}) {
         window.location.href = newhref
     }
 
-    console.log(metadata.IMAGE)
+    // console.log(metadata.IMAGE)
     return (
 
-        <div className="card-container">
+        <div id={id} className="card-container">
             <img className="article-img" src={metadata.IMAGE}></img>
             <div className="text-container">
                 <div><p className="text-title">{metadata.TITLE}</p></div>

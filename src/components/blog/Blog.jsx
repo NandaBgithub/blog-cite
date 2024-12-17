@@ -20,6 +20,14 @@ function Blog(){
         return res.blogs
     }
 
+    const scrollToSection = (section) => {
+        const element = document.getElementById(section);
+        console.log(section)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
 
 
     useEffect(() => {
@@ -43,20 +51,45 @@ function Blog(){
     , [searchContext])
     
     return (
-        <div className="blog-container">
-            {result != null ? 
-                (result.map((element, index) =>{
-                    return (
-                        <BlogCard key={index} metadata={element}/>
-                    )})):<></>}
-            <div className="github-perma-container">
-                <img className="github-icon" src="/blogs/github-mark-white.png">
-                
-                </img>
+        <div className="blog-body-wrapper">
 
-                <a id="github-link" href="https://github.com/NandaBgithub">
-                    GitHub
-                </a>
+
+            <div className="blog-container">
+                {result != null ? 
+                    (result.map((element, index) =>{
+                        
+                        return (
+                            <BlogCard id={element.TITLE} key={index} metadata={element}/>
+                        )})):<></>}
+                <div className="github-perma-container">
+                    <img className="github-icon" src="/blogs/github-mark-white.png">
+                    
+                    </img>
+
+                    <a id="github-link" href="https://github.com/NandaBgithub">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div className="blog-content-container">
+                <h3>Blog List</h3>
+                <ul>
+                    { result != null ?
+                        (
+                            result.map((element, index) => {
+                                return (
+                                    <li className="content-link" key={index} >
+                                        <a onClick={() => scrollToSection(element.TITLE)}>{element.TITLE}</a>
+                                    </li>
+                                )
+                            })
+                        ) : <></>
+
+                    }
+                </ul>
             </div>
         </div>
 

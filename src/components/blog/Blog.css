@@ -3,6 +3,13 @@
     box-sizing: border-box;
     
 }
+
+.blog-body-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .blog-container{
     margin-top: 10px;
     max-height: 300px;
@@ -26,6 +33,7 @@
     color: white;
     bottom: 0;
     margin: 50px;
+    right: 50px;
     gap: 10px;
     
 }
@@ -54,10 +62,11 @@ button:hover{
 
 .card-container{
     border-radius: 10px;
-    width: 50%;
+    width: 70%;
     min-height: 300px;
     display: flex;
     margin: 0 auto;
+    
     flex-direction: row;
     background-color: rgb(255, 255, 255);
 }
@@ -85,7 +94,7 @@ button:hover{
 button{
     border-bottom-right-radius: 80px;
     border-top-left-radius: 80px;
-    width: 50%;
+    width: 70%;
     min-height: 300px;
     background-color: black;
     z-index: 10;
@@ -93,3 +102,10 @@ button{
     position: absolute;
 }
 
+.blog-content-container{
+    margin-top: 10px;
+}
+.blog-content-container ul{
+    list-style: none;
+    margin-top: 10px;
+}
